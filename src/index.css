@@ -33,3 +33,45 @@
   .search-bar button:hover {
     background-color: #b2070d; /* Darker red color on hover */
   }
+
+
+/* section: hero */
+  
+  
+  
+  
+/* section: releases */
+
+#new-releases, #trending {
+  padding: 100px;
+}
+
+.movie-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.movie {
+  width: 100px;
+  height: 150px;
+  position: relative;
+}
+
+.movie > img {
+  height: 200px;
+  aspect-ratio: 1 / 1;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.movie-info {
+  border: 1px solid;
+  position: absolute;
+  height: 150px;
+  width: 100%;
+  top: 0;
+  background-image: linear-gradient(white, rgba(0, 0, 0, 0.675));
+  color: black;
+}
