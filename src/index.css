@@ -1,77 +1,150 @@
-/* Styling for the header component */
+/* Global Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #020738; /* Navy Blue */
+  color: #FFFFFF; /* White */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Component */
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #000; 
-    color: #fff; /* text color */
-  }
-  
-  .logo-text {
-    text-decoration: none; 
-    font-size: 20px; /* font size */
-    font-weight: bold; /* font weight */
-    color: greenyellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px; /* Increased padding */
+  background-color: #020738; /* Navy Blue */
+}
 
-  }
-  
-  .search-bar input {
-    padding: 8px;
-    margin-right: 10px;
-  }
-  
-  .search-bar button {
-    padding: 8px 16px;
-    background-color: greenyellow;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .search-bar button:hover {
-    background-color: #b2070d; /* Darker red color on hover */
-  }
+.logo-text {
+  text-decoration: none;
+  font-size: 24px; /* Increased font size */
+  font-weight: bold;
+  color: #09FD13; /* Lime Green */
+}
+
+.search-bar {
+  position: relative; /* Ensure proper positioning of the search results */
+}
+
+.search-bar input {
+  padding: 10px; /* Increased padding */
+  margin-right: 20px; /* Increased margin */
+  background-color: #FFFFFF; /* White */
+  color: #020738; /* Navy Blue */
+  border: none;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  padding: 10px 20px; /* Increased padding */
+  background-color: #09FD13; /* Lime Green */
+  border: none;
+  color: #020738; /* Navy Blue */
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.search-bar button:hover {
+  background-color: #07AC0D; /* Darker Lime Green on hover */
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #020738; /* Navy Blue */
+  color: #09FD13; /* Lime Green */
+  border: 1px solid #09FD13; /* Lime Green */
+  border-radius: 5px;
+  width: 100%;
+}
+
+.search-results div {
+  padding: 10px 20px; /* Increased padding */
+  cursor: pointer;
+}
+
+.search-results div:hover {
+  background-color: #09FD13; /* Lime Green on hover */
+  color: #020738; /* Navy Blue on hover */
+}
+
+/* Movie Section Component */
+
+.movie-section h2 {
+  color: #09FD13; /* Lime Green */
+}
 
 
-/* section: hero */
-  
-  
-  
-  
-/* section: releases */
-
-#new-releases, #trending {
-  padding: 100px;
+.movie-section {
+  padding: 20px;
 }
 
 .movie-container {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .movie {
-  width: 100px;
-  height: 150px;
   position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
-.movie > img {
-  height: 200px;
-  aspect-ratio: 1 / 1;
+.movie img {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
 }
 
-.hidden {
-  visibility: hidden;
+.movie:hover img {
+  transform: scale(1.1);
 }
 
-.movie-info {
-  border: 1px solid;
-  position: absolute;
-  height: 150px;
-  width: 100%;
+.modal {
+  position: fixed;
   top: 0;
-  background-image: linear-gradient(white, rgba(0, 0, 0, 0.675));
-  color: black;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
+
+.modal-content {
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #020738; /* Navy Blue */
+}
+
+.close:hover {
+  color: #09FD13; /* Lime Green on hover */
+}
+
+
+
